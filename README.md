@@ -39,7 +39,7 @@ xxx
 
 citationclaw
 
-自动驾驶里面的VLA
+自动驾驶里面的VLA,世界模型
 
 xxxx
 
