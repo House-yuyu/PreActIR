@@ -41,7 +41,7 @@ citationclaw
 
 自动驾驶里面的VLA,世界模型
 
-xxxx
+xxxx；专利转让
 
 xx VTLA, 竞合关系
 
