@@ -27,21 +27,12 @@ xxx 机场，流量等
 语义推理链，上下文学习
 怎么改，
 typescript,npm
-xx
-xxx
-xxxx
 
-codex spark
-
-keep think
-
-xxx
+GEO 对谷歌学术引用的帮助 ******************************
 
 citationclaw
 
 自动驾驶里面的VLA,世界模型
-
-xxxx；专利转让
 
 xx VTLA, 竞合关系
 
@@ -49,23 +40,9 @@ xx VTLA, 竞合关系
 
 OpenAI已经在实际使用“递归式自我改进”。 不只是让模型研究模型，更包括让最强模型优化CUDA内核、推理栈和基础设施，形成“更强模型→更高效率→更多算力→更强模型”的飞轮。
 
-xxx
 
 简单但有用是一种美；xxx；
 
-cccx
-
-一定xxxx
-
-xx
-
-
-xxx
-
-xxxx
-
-
-xxx
 
 xxxx；很多学生
 
