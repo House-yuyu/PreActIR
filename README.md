@@ -45,11 +45,7 @@ OpenAI已经在实际使用“递归式自我改进”。 不只是让模型研�
 
 planning
 
-XXX
+XXX；xx
 
 
 xxxx；很多学生
-
-XX；xxxx；xxx
-
-xxx
