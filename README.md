@@ -30,7 +30,7 @@ typescript,npm
 
 GEO 对谷歌学术引用的帮助 ******************************
 
-citationclaw
+citationclaw xxx
 
 自动驾驶里面的VLA,世界模型
 
