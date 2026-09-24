@@ -18,7 +18,7 @@ EUVP-Dark 不 resize 原图本身全部是 256×256
 ICLR 2 xx
 
 GPT调参不错
-xx
+xx；xx
 
 html工作加速(可以不用那么多条目) xx
 
