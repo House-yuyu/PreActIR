@@ -1,0 +1,115 @@
+seed: 7
+
+degradations:
+  names: [noise, blur, lowlight, haze, jpeg, rain]
+
+tools:
+  names: [denoise, deblur, brighten, dehaze, dejpeg, derain]
+  strengths: [0.4, 0.8]
+
+data:
+  root: outputs/debug/interveneir
+  image_size: 64
+  max_degradations: 2
+  states_per_image: 1
+  max_actions_per_state: 4
+  spatial_probability: 0.5
+  distractor_action_probability: 0.25
+  acceptance_target_gain: 0.005
+  acceptance_max_damage: 0.05
+  num_workers: 0
+
+belief_model:
+  base_channels: 8
+  dropout: 0.0
+  severity_logvar_min: -6.0
+  severity_logvar_max: 2.0
+
+world_model:
+  base_channels: 8
+  feature_dim: 32
+  action_embed_dim: 16
+  hidden_dim: 64
+  dropout: 0.0
+  logvar_min: -6.0
+  logvar_max: 2.0
+  belief_noise_std: 0.01
+
+verifier_model:
+  base_channels: 8
+  feature_dim: 32
+  action_embed_dim: 16
+  hidden_dim: 64
+  dropout: 0.0
+
+train_belief:
+  epochs: 1
+  batch_size: 2
+  lr: 0.001
+  weight_decay: 0.0
+  amp: false
+  grad_clip: 1.0
+  save_dir: outputs/debug/belief
+  loss_weights:
+    presence: 1.0
+    severity: 1.0
+    mask_bce: 1.0
+    mask_dice: 1.0
+
+train_world:
+  epochs: 1
+  batch_size: 2
+  lr: 0.001
+  weight_decay: 0.0
+  amp: false
+  grad_clip: 1.0
+  save_dir: outputs/debug/world
+  loss_weights:
+    degradation: 1.0
+    quality: 0.5
+    damage: 1.0
+    accept: 0.5
+    ranking: 0.2
+
+train_verifier:
+  epochs: 1
+  batch_size: 2
+  lr: 0.001
+  weight_decay: 0.0
+  amp: false
+  grad_clip: 1.0
+  save_dir: outputs/debug/verifier
+  loss_weights:
+    accept: 1.0
+    status: 0.75
+    target_gain: 0.5
+    side_effect: 0.5
+    outside_change: 0.5
+
+agent:
+  max_steps: 2
+  presence_threshold: 0.25
+  resolved_threshold: 0.12
+  min_target_gain: -0.02
+  max_side_effect: 0.30
+  max_outside_change: 0.30
+  min_planning_utility: -10.0
+  learned_verifier_threshold: 0.30
+  learned_verifier_mode: weighted
+  learned_verifier_weight: 0.50
+  use_diagnostic_probes: true
+  diagnostic_uncertainty_threshold: 0.20
+  diagnostic_blend: 0.25
+  top_active_degradations: 2
+  horizon: 2
+  beam_size: 2
+  discount: 0.8
+  use_spatial_masks: true
+  region_threshold: 0.45
+  utility_weights:
+    target_gain: 2.0
+    quality_gain: 0.8
+    side_effect: 1.5
+    damage: 2.0
+    uncertainty: 0.35
+    cost: 0.05

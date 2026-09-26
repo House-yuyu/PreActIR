@@ -1,0 +1,8 @@
+torch>=2.2
+numpy>=1.24
+Pillow>=10.0
+opencv-python-headless>=4.8
+PyYAML>=6.0
+scikit-image>=0.22
+tqdm>=4.66
+tensorboard>=2.15

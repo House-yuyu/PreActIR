@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "preactir"
+version = "0.1.0"
+authors = [{name = "Anonymous Authors"}]
+maintainers = [{name = "Anonymous Authors"}]
+license = {file = "LICENSE"}
+description = "Look Before You Restore: Learning to Predict Before Acting for Agentic Image Restoration"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "torch>=2.2",
+  "numpy>=1.24",
+  "Pillow>=10.0",
+  "opencv-python-headless>=4.8",
+  "PyYAML>=6.0",
+  "scikit-image>=0.22",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+train = ["tensorboard>=2.15"]
+dev = ["pytest>=8.0", "ruff>=0.4"]
+
+[tool.setuptools.packages.find]
+include = ["preactir*"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
