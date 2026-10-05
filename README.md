@@ -5,6 +5,7 @@
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.2%2B-orange.svg)](https://pytorch.org/)
 [![Task](https://img.shields.io/badge/Task-Agentic%20Image%20Restoration-green.svg)](#overview)
+<img src="https://visitor-badge.laobi.icu/badge?page_id=House-yuyu.PreActIR" alt="Visitors">
 
 </div>
 
