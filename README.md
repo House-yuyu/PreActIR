@@ -9,7 +9,7 @@
 
 </div>
 
-PyTorch implementation for the manuscript **Look Before You Restore: Learning to Predict Before Acting for Agentic Image Restoration**.
+PyTorch implementation for the manuscript **PreActIR**.
 
 ![PreActIR framework](fig/PreActIR_framework.png)
 
@@ -22,10 +22,6 @@ The framework has three parts:
 - **Predict before acting:** learn action consequences from real before/after tool transitions and use the predictions to rank candidate tools.
 - **Act and verify:** check the actual restored output, commit useful changes, roll back rejected changes, and count every real execution against the budget.
 - **Audit and adapt:** use an offline candidate-frontier audit to separate tool-selection headroom from tool-space limits, then study targeted tool adaptation on external replay data.
-
-The frontier audit uses clean references **post hoc**; it is an analysis of attainable performance, not a deployment-time decision rule. The manuscript uses one-step planning for its controlled ranking and closed-loop comparisons; the implementation also supports configurable short-horizon planning.
-
-**Current code release.** This repository includes synthetic transition-data generation, belief/world/verifier training, closed-loop inference, evaluation, and adapters for external restoration models. The two bundled configurations use six lightweight classical tools. The complete paper system additionally requires the external restoration toolbox, model checkpoints, and experiment-specific configurations, which are not bundled in this checkout.
 
 
 ## Installation
