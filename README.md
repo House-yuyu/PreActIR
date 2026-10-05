@@ -9,7 +9,7 @@
 
 </div>
 
-PyTorch implementation for the manuscript **PreActIR**.
+PyTorch implementation for the **PreActIR**.
 
 ![PreActIR framework](fig/PreActIR_framework.png)
 
