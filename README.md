@@ -10,7 +10,7 @@
 
 PyTorch implementation for the manuscript **Look Before You Restore: Learning to Predict Before Acting for Agentic Image Restoration**.
 
-![PreActIR framework: action-conditioned predictive modeling, predict-act-verify control, and offline tool-space analysis](fig/PreActIR_framework.png)
+![PreActIR framework](fig/PreActIR_framework.png)
 
 ## Overview
 
